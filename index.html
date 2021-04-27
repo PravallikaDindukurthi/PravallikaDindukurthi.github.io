@@ -1,0 +1,1317 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="js.js" async></script>
+<style>
+* {box-sizing: border-box;}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: violet;
+  
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: black;
+  color: white;
+}
+
+.topnav .search-container {
+  float: right;
+}
+
+.topnav input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+}
+
+.topnav .cart button {
+  float: right;
+  background-color: violet;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+.topnav .cart button:hover {
+  background: #ccc;
+}
+.topnav .search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+.topnav-right {
+  float: right;
+}
+.topnav .search-container button:hover {
+  background: #ccc;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav .search-container {
+    float: none;
+  }
+  .topnav a, .topnav input[type=text], .topnav .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .topnav input[type=text] {
+    border: 1px solid #ccc;  
+  }
+  .main {
+  margin-top: 300px; /* Add a top margin to avoid content overlay */
+}
+}
+* {box-sizing: border-box}
+body {font-family: "Lato", sans-serif;}
+
+/* Style the tab */
+.tab {
+  float: left;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  width: 20%;
+  height: 800px;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+  border: 1px solid #ccc;
+  width: 80%;
+  border-left: none;
+  height: 800px;
+}
+/* SLIDE SHOW OF IMAGES  */
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+/* PRODUCT CARDS*/
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.price {
+  color: grey;
+  font-size: 22px;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+</style>
+</head>
+<body>
+
+<div class="topnav">
+  <a class="active" href="#home">ShoponShop</a>
+  <a href="#about">About</a>
+  <a href="#contact">Contact</a>
+ <div class="search-container">
+    <form action="/action_page.php">
+      <input type="text" placeholder="Search.." name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
+  <div class="cart">
+  <button type="submit" onclick="openTab(event, 'CART')"><i class="fa fa-cart" >&#xf07a;</i></button>
+</div>
+  <div class="topnav-right">
+    <a href="login.htm"><i class="fa fa-fw fa-user"></i> Login</a>
+  </div>
+</div>
+
+<div class="tab">
+  
+  <button class="tablinks" onclick="openTab(event, 'Home')" id="defaultOpen">Home</button>
+  <button class="tablinks" onclick="openTab(event, 'Beach Attire')" id="defaultOpen">Beach Attire</button>
+  <button class="tablinks" onclick="openTab(event, 'Trekking ')">Hiking and Trekking </button>
+  <button class="tablinks" onclick="openTab(event, 'Medical Kits')">Medical Kits</button>
+  <button class="tablinks" onclick="openTab(event, 'Toiletries')">Toiletries</button>
+  <button class="tablinks" onclick="openTab(event, 'WildLife Watching')">WildLife Watching</button>
+  <button class="tablinks" onclick="openTab(event, 'Skiing')">Skiing and Snowboarding</button>
+  <button class="tablinks" onclick="openTab(event, 'Mountaneering')">Mountaneering and Climbing</button>
+
+
+
+</div>
+
+<div id="Home" class="tabcontent">
+  <h2>Home</h2>
+  
+  <div class="slideshow-container">
+
+		<div class="mySlides fade">
+		  
+		  <img src="https://www.mexpro.com/blog/wp-content/uploads/2018/06/iStock-954571126-800-opt.jpg" style="width:100%">
+		  <div class="text"></div>
+		</div>
+
+		<div class="mySlides fade">
+		  <img src="https://d2rdhxfof4qmbb.cloudfront.net/wp-content/uploads/20190425170948/friends-on-road-trip.jpg" style="width:100%">
+		  <div class="text"></div>
+		</div>
+
+		<div class="mySlides fade">
+		  <!--<div class="numbertext">3 / 3</div>-->
+		  <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8dHJla2tpbmd8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&w=1000&q=80" style="width:100%">
+		  <div class="text">Caption </div>
+		</div>
+
+		<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+		<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+		</div>
+		<br>
+
+		<div style="text-align:center">
+		  <span class="dot" onclick="currentSlide(1)"></span> 
+		  <span class="dot" onclick="currentSlide(2)"></span> 
+		  <span class="dot" onclick="currentSlide(3)"></span> 
+		</div>
+	
+	<h3>TRENDING PRODUCTS</h3>
+	</div>
+<div id="Beach Attire" class="tabcontent">
+	<h2>Beach Attire</h2>
+
+<div class="row">
+  <div class="column"> 
+ <div class="card">
+  <img src="https://www.decathlon.in/_next/image?url=https%3A%2F%2Fcontents.mediadecathlon.com%2Fp1294215%2Fk%2455efde9dfeb108fe54aeef9b805d277d%2Fswimming-pool-kickboard-blue-yellow.jpg%3F%26f%3D250x250%26format%3Dauto&w=640&q=75" style="width:100%">
+  <h2>Swimming Equipment</h2>
+  <p><button><a href="https://www.decathlon.in/swimming-equipment/swimming-materials-21278">Check Now</a></button></p>
+  </div>
+   </div>
+
+	<div class="column">
+  <div class="card">
+  <img src="https://www.decathlon.in/_next/image?url=https%3A%2F%2Fcontents.mediadecathlon.com%2Fp1632389%2F072e8ce0bc6f05db1bb5a6a2d38fcb7b%2Fp1632389.jpg%26format%3Dauto%26format%3Dauto&w=640&q=75" style="width:100%">
+  <h2>Women Swimming Costume</h2>
+  <p></p>
+  <p><button><a href="https://www.decathlon.in/swimming-costumes/women-swimming-costumes-1672?icm=mainbanner&icn=SWIMMINGSP">Check Now</a></button></p>
+  </div>
+ </div>
+	
+	
+	
+  <div class="column">
+  <div class="card">
+  <img src="https://www.decathlon.in/_next/image?url=https%3A%2F%2Fcontents.mediadecathlon.com%2Fp1662506%2F170ee22400dea7556c0f096a4afcc5c9%2Fp1662506.jpg%26format%3Dauto%26format%3Dauto&w=640&q=75" style="width:100%">
+  <h2>Men Swimming Costume</h2>
+  <p><button><a href="https://www.decathlon.in/swimming-costumes/men-swimming-costumes-1682?icm=mainbanner&icn=SWIMMINGSP">Check Now</a></button></p>
+  </div>
+   </div>
+	
+  <div class="column">
+  <div class="card">
+  <img src="https://www.decathlon.in/_next/image?url=https%3A%2F%2Fcontents.mediadecathlon.com%2Fp1746314%2F9091c5f60e9f7e4d617382aaf32dcdc9%2Fp1746314.jpg%26format%3Dauto&w=640&q=75" style="width:100%">
+  <h2>Kids Swimming Costume</h2>
+  <p><button><a href="https://www.decathlon.in/swimming-costumes/babies-swimming-costumes-1700?icm=mainbanner&icn=SWIMMINGSP">Check Now</a></button></p>
+  </div>
+   </div>
+   
+   
+</div> 
+<div class="row">
+  <div class="column"> 
+ <div class="card">
+  <img src="https://www.decathlon.in/_next/image?url=https%3A%2F%2Fcontents.mediadecathlon.com%2Fp1766118%2Fk%24a37551aab42f3ad2893a7f9f28228292%2Flarge-pool-ball-orange-pink.jpg%3F%26f%3D250x250%26format%3Dauto&w=640&q=75" style="width:100%">
+  <h2>Water Polo</h2>
+  <p><button><a href="https://www.decathlon.in/all-sports/water-polo-1759?icm=mainbanner&icn=SWIMMINGSP">Check Now</a></button></p>
+  </div>
+   </div>
+
+	<div class="column">
+  <div class="card">
+  <img src="https://www.decathlon.in/_next/image?url=https%3A%2F%2Fcontents.mediadecathlon.com%2Fp1297386%2Fk%24cfdf2b2016e2f56a60cd661b72131ed4%2Fd125-frisbee-navy-blue.jpg%3F%26f%3D250x250%26format%3Dauto&w=640&q=75	" style="width:100%">
+  <h2>Boomerang&Frisbee</h2>
+  <p></p>
+  <p><button><a href="https://www.decathlon.in/all-sports/boomerang-frisbee-11063?icm=frisbee&icn=minibanner">Check Now</a></button></p>
+  </div>
+ </div>
+	
+	
+	
+  <div class="column">
+  <div class="card">
+  <img src="https://www.decathlon.in/_next/image?url=https%3A%2F%2Fcontents.mediadecathlon.com%2Fp1792345%2Fk%249b83ab0027607a39ebc5f442dd08ab15%2Fgirls-flip-flops-120-miu.jpg%3F%26f%3D250x250%26format%3Dauto&w=640&q=75" style="width:100%">
+  <h2>Flip Flops</h2>
+  <p><button><a href="https://www.decathlon.in/surfing/flip-flop-beach-shoes-21199?icm=flipflops&icn=minibanner">Check Now</a></button></p>
+  </div>
+   </div>
+	
+  <div class="column">
+  <div class="card">
+  <img src="https://www.decathlon.in/_next/image?url=https%3A%2F%2Fcontents.mediadecathlon.com%2Fp1313480%2Fk%2481da667b8eb46cc7757fa67d51c2cc6c%2Ffoam-surfboard-8quote2-500-with-traction-pad.jpg%3F%26f%3D250x250%26format%3Dauto&w=640&q=75" style="width:100%">
+  <h2>Surfing Accesories</h2>
+  <p><button><a href="https://www.decathlon.in/surfing/surfboards-and-accessories-19096?icm=surfboards&icn=minibanner">Check Now</a></button></p>
+  </div>
+   </div>
+   
+   
+</div> 
+<div class="row">
+  <div class="column"> 
+ <div class="card">
+  <img src="https://www.decathlon.in/_next/image?url=https%3A%2F%2Fcontents.mediadecathlon.com%2Fp1172440%2F793fa66bce5c85a4aac1d8e8d3adb690%2Fp1172440.jpg%26format%3Dauto&w=640&q=75" style="width:100%">
+  <h2>Snorkeling & Scuba Diving</h2>
+  <p><button><a href="https://www.decathlon.in/shop/snorkeling-diving">Check Now</a></button></p>
+  </div>
+   </div>
+
+	<div class="column">
+  <div class="card">
+  <img src="https://www.decathlon.in/_next/image?url=https%3A%2F%2Fcontents.mediadecathlon.com%2Fp1787525%2F9d5936ecfc7dd4343d099fc17f115bed%2Fp1787525.jpg%26format%3Dauto&w=640&q=75" style="width:100%">
+  <h2>Sailing & Cruising Accesories</h2>
+  <p></p>
+  <p><button><a href="https://www.decathlon.in/shop/decathlon-sailing">Check Now</a></button></p>
+  </div>
+ </div>
+	
+</div>
+
+</div>
+
+<div id="Trekking " class="tabcontent">
+  <h2>Hiking and Trekking </h2>
+  <div class="row">
+  <div class="column"> 
+ <div class="card">
+  <img src="https://www.decathlon.in/_next/image?url=https%3A%2F%2Fcontents.mediadecathlon.com%2Fp1154695%2F1984e688c195218f1fecefd990629a09%2Fp1154695.jpg%26format%3Dauto&w=640&q=75" alt="Denim Jeans" style="width:100%">
+  <h2>Trekking Poles</h2>
+  <p></p>
+  <p> <button class="tablinks" onclick="openTab(event, 'Trekking poles')">Click here</button>
+</p>
+  </div>
+   </div>
+
+	<div class="column">
+  <div class="card">
+  <img src="https://contents.mediadecathlon.com/p1597346/1c2af18be668a63a7eb426efe4128159/p1597346.jpg?f=650x650&format=auto" alt="Denim Jeans" style="width:100%">
+  <h2>Head torch</h2>
+  <p></p>
+  <p><button><a href="https://www.decathlon.in/hiking-and-trekking/equipment-and-accessories-21254?refinementList%5Btes_product_nature_en%5D%5B0%5D=Headlamp">Check Now</a></button></p>
+  </div>
+ </div>
+	
+	
+	
+  <div class="column">
+  <div class="card">
+  <img src="https://contents.mediadecathlon.com/p1013874/dc9e8f52db4165fd3a363f6551363b98/p1013874.jpg?f=650x650&format=auto" alt="Denim Jeans" style="width:100%">
+  <h2>Trekking Gloves</h2>
+  <p><button><a href="https://www.decathlon.in/hiking-and-trekking/equipment-and-accessories-21254?refinementList%5Btes_product_nature_en%5D%5B0%5D=Gloves">Check Now</a></button></p>
+  </div>
+   </div>
+   
+   <div class="column">
+  <div class="card">
+  <img src="https://www.decathlon.in/_next/image?url=https%3A%2F%2Fcontents.mediadecathlon.com%2Fp1981373%2Fk%249b63009207eb708712157b83d42dd74b%2Fadults-category-3-hiking-sunglasses-mh140.jpg%3F%26f%3D250x250%26format%3Dauto&w=640&q=75" style="width:100%">
+  <h2>Sun Glasses</h2>
+<p><button class="tablinks" onclick="openTab(event, 'Sunglasses')">Click here</button></p>
+   
+  </div>
+   </div>
+
+</div> 
+
+  <div class="row">
+  <div class="column"> 
+ <div class="card">
+  <img src="https://www.decathlon.in/_next/image?url=https%3A%2F%2Fcontents.mediadecathlon.com%2Fp1332364%2Fk%245ed6de00100c91affa2c16959fccb101%2Fventilated-mountain-trekking-cap-trek-500-dark-grey.jpg%3F%26f%3D250x250%26format%3Dauto&w=640&q=75" style="width:100%">
+  <h2>Caps</h2>
+  <p></p>
+  <p><button><a href="https://www.decathlon.in/hiking-and-trekking/equipment-and-accessories-21254?refinementList%5Btes_product_nature_en%5D%5B0%5D=Hat&refinementList%5Btes_product_nature_en%5D%5B1%5D=Cap&refinementList%5Btes_product_nature_en%5D%5B2%5D=Headband">Check Now</a></button></p>
+  </div>
+   </div>
+
+	<div class="column">
+  <div class="card">
+  <img src="https://www.decathlon.in/_next/image?url=https%3A%2F%2Fcontents.mediadecathlon.com%2Fp1154714%2Fk%24645c86bdcdd76c2a2226569d519e4943%2Faluminium-bottle-15-l-with-quick-open-cap-black.jpg%3F%26f%3D250x250%26format%3Dauto&w=640&q=75" style="width:100%">
+  <h2>Water Bottles</h2>
+  <p></p>
+  <p><button><a href="https://www.decathlon.in/hiking-and-trekking/equipment-and-accessories-21254?refinementList%5Btes_product_nature_en%5D%5B0%5D=Isothermal%20bottle&refinementList%5Btes_product_nature_en%5D%5B1%5D=Water%20bottle">Check Now</a></button></p>
+  </div>
+ </div>
+	
+	
+	
+  <div class="column">
+  <div class="card">
+  <img src="https://contents.mediadecathlon.com/p1114498/45b471bfc7964367a5c3d30b11875478/p1114498.jpg?f=650x650&format=auto" style="width:100%">
+  <h2>Torches</h2>
+  <p><button><a href="https://www.decathlon.in/hiking-and-trekking/equipment-and-accessories-21254?refinementList%5Btes_product_nature_en%5D%5B0%5D=Torch&refinementList%5Btes_product_nature_en%5D%5B1%5D=Lantern">Check Now</a></button></p>
+  </div>
+   </div>
+   
+   <div class="column">
+  <div class="card">
+  <img src="https://www.decathlon.in/_next/image?url=https%3A%2F%2Fcontents.mediadecathlon.com%2Fp1800235%2Fk%24c6ac7670872aabd0fe37e44e3291e481%2Fadult-hiking-binoculars-with-adjustment-mh-b560-x12-magnification-black.jpg%3F%26f%3D250x250%26format%3Dauto&w=640&q=75" style="width:100%">
+  <h2>Binoculars</h2>
+  <p><button><a href="https://www.decathlon.in/hiking-and-trekking/equipment-and-accessories-21254?refinementList%5Btes_product_nature_en%5D%5B0%5D=Binoculars&refinementList%5Btes_product_nature_en%5D%5B1%5D=Monocular">Check Now</a></button></p>
+  </div>
+   </div>
+
+</div> 
+<div class="row">
+  <div class="column"> 
+ <div class="card">
+  <img src="https://www.decathlon.in/_next/image?url=https%3A%2F%2Fcontents.mediadecathlon.com%2Fp1930150%2Fk%24351b8e6865b1c8c18a25cc2e1e4c4fe9%2Fmens-hiking-shoes-waterproof-mh100-khaki.jpg%3F%26f%3D250x250%26format%3Dauto&w=640&q=75" style="width:100%">
+  <h2>Shoes</h2>
+  <p></p>
+  <p><button><a href="https://www.decathlon.in/all-sports/hiking-and-trekking-2508?refinementList%5Btes_product_nature_en%5D%5B0%5D=Shoes&refinementList%5Btes_product_nature_en%5D%5B1%5D=Sandals">Check Now</a></button></p>
+  </div>
+   </div>
+
+	<div class="column">
+  <div class="card">
+  <img src="https://www.decathlon.in/_next/image?url=https%3A%2F%2Fcontents.mediadecathlon.com%2Fp1537814%2Fk%240c2ea16bad027fec4f4d40daad436dd0%2Fmen-s-mountain-trekking-trousers-trek-900-khaki.jpg%3F%26f%3D250x250%26format%3Dauto&w=640&q=75" style="width:100%">
+  <h2>Shorts</h2>
+  <p></p>
+  <p><button><a href="https://www.decathlon.in/all-sports/hiking-and-trekking-2508?refinementList%5Btes_product_nature_en%5D%5B0%5D=Trousers&refinementList%5Btes_product_nature_en%5D%5B1%5D=Shorts&refinementList%5Btes_product_nature_en%5D%5B2%5D=Overtrousers&refinementList%5Btes_product_nature_en%5D%5B3%5D=Leggings&refinementList%5Btes_product_nature_en%5D%5B4%5D=Zip%20Off%20Trousers">Check Now</a></button></p>
+  </div>
+ </div>
+	
+	
+	
+  <div class="column">
+  <div class="card">
+  <img src="https://www.decathlon.in/_next/image?url=https%3A%2F%2Fcontents.mediadecathlon.com%2Fp1935810%2Fk%244cf1a03b95e5be7ce7581603c7701409%2Fmens-snow-jacket-warm-waterproof-sh100-x-warm-blue.jpg%3F%26f%3D250x250%26format%3Dauto&w=640&q=75" style="width:100%">
+  <h2>Shirts</h2>
+  <p><button><a href="https://www.decathlon.in/all-sports/hiking-and-trekking-2508?refinementList%5Btes_product_nature_en%5D%5B0%5D=T-shirt&refinementList%5Btes_product_nature_en%5D%5B1%5D=Jacket&refinementList%5Btes_product_nature_en%5D%5B2%5D=Fleece&refinementList%5Btes_product_nature_en%5D%5B3%5D=Padded%20Jacket&refinementList%5Btes_product_nature_en%5D%5B4%5D=Long-sleeved%20t-shirt&refinementList%5Btes_product_nature_en%5D%5B5%5D=Down%20jacket&refinementList%5Btes_product_nature_en%5D%5B6%5D=Shorts&refinementList%5Btes_product_nature_en%5D%5B7%5D=Short-sleeved%20shirt&refinementList%5Btes_product_nature_en%5D%5B8%5D=Long-sleeved%20shirt">Check Now</a></button></p>
+  </div>
+   </div>
+   
+   <div class="column">
+  <div class="card">
+  <img src="https://www.decathlon.in/_next/image?url=https%3A%2F%2Fcontents.mediadecathlon.com%2Fp1798276%2Fk%24ade616473edb8f6cc4976b287900e5e9%2Ftrekking-mummy-sleeping-bag-trek-500-10c-wadding-twinnable-blue.jpg%3F%26f%3D250x250%26format%3Dauto&w=640&q=75	" style="width:100%">
+  <h2>Sleeping Bags</h2>
+  <p><button><a href="https://www.decathlon.in/all-sports/hiking-and-trekking-2508?refinementList%5Btes_product_nature_en%5D%5B0%5D=Sleeping%20bag">Check Now</a></button></p>
+  </div>
+   </div>
+
+</div> 
+</div>
+<div id="Skiing" class="tabcontent">
+  <h2>Skiing and Snowboarding</h2>
+	<h3>Men Ski Clothing</h3>	 
+<div class="row">
+  <div class="column"> 
+ <div class="card">
+  <img src="https://www.decathlon.in/_next/image?url=https%3A%2F%2Fcontents.mediadecathlon.com%2Fp742841%2Fbac271a4638c60ca1dd96161fae59a04%2Fp742841.jpg%26format%3Dauto&w=640&q=75" style="width:100%">
+  <h2>Men Ski Jackets</h2>
+  <p><button><a href="https://www.decathlon.in/men-ski-clothing/men-ski-jackets-10877?icm=WEDZESP&icn=Menskijackets">Check Now</a></button></p>
+  </div>
+   </div>
+
+	<div class="column">
+  <div class="card">
+  <img src="https://contents.mediadecathlon.com/p1860702/79d10897cadeef5ff1878982c513c70f/p1860702.jpg?f=650x650&format=auto" style="width:100%">
+  <h2>Men Thermals</h2>
+  <p></p>
+  <p><button><a href="https://www.decathlon.in/men-ski-clothing/men-thermals-10883">Check Now</a></button></p>
+  </div>
+ </div>
+	
+	
+	
+  <div class="column">
+  <div class="card">
+  <img src="https://www.decathlon.in/_next/image?url=https%3A%2F%2Fcontents.mediadecathlon.com%2Fp1860715%2Fk%249f143f373f4bddbdebffa06b17b123ed%2Fmen-s-ski-trousers-180-black.jpg%3F%26f%3D250x250%26format%3Dauto&w=640&q=75" style="width:100%">
+  <h2>Men Ski Pants</h2>
+  <p><button><a href="https://www.decathlon.in/men-ski-clothing/men-ski-pants-10880">Check Now</a></button></p>
+  </div>
+   </div>
+   <div class="column">
+  <div class="card">
+  <img src="https://www.decathlon.in/_next/image?url=https%3A%2F%2Fcontents.mediadecathlon.com%2Fp1861035%2F6a9c2b9546e9335831d31a107dd7a7b0%2Fp1861035.jpg%26format%3Dauto&w=640&q=75" style="width:100%">
+  <h2>Gloves</h2>
+  <p><button><a href="https://www.decathlon.in/ski-clothing-accessories/gloves-and-mittens-5007?icm=WEDZESP&icn=wedzegloves">Check Now</a></button></p>
+  </div>
+   </div>
+  
+   
+   
+</div> 
+<h3>Women Ski Clothing</h3>	 
+<div class="row">
+  <div class="column"> 
+ <div class="card">
+  <img src="https://www.decathlon.in/_next/image?url=https%3A%2F%2Fcontents.mediadecathlon.com%2Fp1871326%2Fb910604352d4bf0b0e57ad1b724a50a4%2Fp1871326.jpg%26format%3Dauto&w=640&q=75" style="width:100%">
+  <h2>Women Ski Jackets</h2>
+  <p><button><a href="https://www.decathlon.in/women-ski-clothing/women-ski-jackets-10937">Check Now</a></button></p>
+  </div>
+   </div>
+
+	<div class="column">
+  <div class="card">
+  <img src="https://www.decathlon.in/_next/image?url=https%3A%2F%2Fcontents.mediadecathlon.com%2Fp1508730%2Fk%24ca6176ab120ee71cfc991f36028b68b0%2Fwomen-s-ski-base-layer-top-580-i-soft-black-pink.jpg%3F%26f%3D250x250%26format%3Dauto&w=640&q=75" style="width:100%">
+  <h2>Women Thermals</h2>
+  <p></p>
+  <p><button><a href="https://www.decathlon.in/women-ski-clothing/women-thermals-10943">Check Now</a></button></p>
+  </div>
+ </div>
+	
+	
+	
+  <div class="column">
+  <div class="card">
+  <img src="https://www.decathlon.in/_next/image?url=https%3A%2F%2Fcontents.mediadecathlon.com%2Fp1691581%2Fk%243eefb4dcbc5bb545b722afd82746a92a%2Fwomens-ski-trousers-180-black.jpg%3F%26f%3D250x250%26format%3Dauto&w=640&q=75" style="width:100%">
+  <h2>Women Ski Pants</h2>
+  <p><button><a href="https://www.decathlon.in/women-ski-clothing/women-ski-pants-10946">Check Now</a></button></p>
+  </div>
+   </div>
+   <div class="column">
+  <div class="card">
+  <img src="https://www.decathlon.in/_next/image?url=https%3A%2F%2Fcontents.mediadecathlon.com%2Fp1861035%2F6a9c2b9546e9335831d31a107dd7a7b0%2Fp1861035.jpg%26format%3Dauto&w=640&q=75" style="width:100%">
+  <h2>Gloves</h2>
+  <p><button><a href="https://www.decathlon.in/ski-clothing-accessories/gloves-and-mittens-5007?icm=WEDZESP&icn=wedzegloves">Check Now</a></button></p>
+  </div>
+   </div>
+  
+   
+</div> 
+<h3>Kids Ski Clothing</h3>	 
+<div class="row">
+  <div class="column"> 
+ <div class="card">
+  <img src="https://www.decathlon.in/_next/image?url=https%3A%2F%2Fcontents.mediadecathlon.com%2Fp1725767%2Fcbf68e1749fd27bab47f0c54eddbd6de%2Fp1725767.jpg%26format%3Dauto&w=640&q=75" style="width:100%">
+  <h2>Kids Ski Jackets</h2>
+  <p><button><a href="https://www.decathlon.in/kids-ski-clothing/kids-ski-jackets-10910">Check Now</a></button></p>
+  </div>
+   </div>
+
+	<div class="column">
+  <div class="card">
+  <img src="https://www.decathlon.in/_next/image?url=https%3A%2F%2Fcontents.mediadecathlon.com%2Fp1694082%2Fk%2416cec4e1b8ad1b633f132beb4ee55d5f%2Fkids-ski-base-layer-top-freshwarm-black.jpg%3F%26f%3D250x250%26format%3Dauto&w=640&q=75" style="width:100%">
+  <h2>Kids Thermals</h2>
+  <p></p>
+  <p><button><a href="https://www.decathlon.in/kids-ski-clothing/kids-thermals-10916">Check Now</a></button></p>
+  </div>
+ </div>
+	
+	
+	
+  <div class="column">
+  <div class="card">
+  <img src="https://www.decathlon.in/_next/image?url=https%3A%2F%2Fcontents.mediadecathlon.com%2Fp1668670%2Fk%246fa6d6ca98bc73a14faad733cb752545%2Fkids-ski-trousers-100-dark-grey.jpg%3F%26f%3D250x250%26format%3Dauto&w=640&q=75" style="width:100%">
+  <h2>Kids Ski Pants</h2>
+  <p><button><a href="https://www.decathlon.in/kids-ski-clothing/kids-ski-pants-and-trousers-10922">Check Now</a></button></p>
+  </div>
+   </div>
+	
+  <div class="column">
+  <div class="card">
+  <img src="https://www.decathlon.in/_next/image?url=https%3A%2F%2Fcontents.mediadecathlon.com%2Fp1053274%2Fk%2482965cd3df165935f3add732a29f29b2%2Fchildren-s-ski-boots-pumzi-500-blue.jpg%3F%26f%3D250x250%26format%3Dauto&w=640&q=75" style="width:100%">
+  <h2>Kids Ski Equipment</h2>
+  <p><button><a href="https://www.decathlon.in/ski-equipment/kid-ski-equipment-10958">Check Now</a></button></p>
+  </div>
+   </div>
+   
+   
+</div> 
+<h3>Ski Accesories</h3>	 
+<div class="row">
+  <div class="column"> 
+ <div class="card">
+  <img src="https://www.decathlon.in/_next/image?url=https%3A%2F%2Fcontents.mediadecathlon.com%2Fp1178030%2Fk%244ee8344013b59a322cd3d6130ca268b4%2Fkids-and-adult-skiing-and-snowboarding-mask-g-100-bad-weather-black.jpg%3F%26f%3D250x250%26format%3Dauto&w=640&q=75" style="width:100%">
+  <h2>Ski Goggles</h2>
+  <p><button><a href="https://www.decathlon.in/protection-and-accessories/ski-snowboard-goggles-5203">Check Now</a></button></p>
+  </div>
+   </div>
+
+	<div class="column">
+  <div class="card">
+  <img src="https://www.decathlon.in/_next/image?url=https%3A%2F%2Fcontents.mediadecathlon.com%2Fp1874151%2Fk%24c6df6c4487234bd5e68de9603ddbdc81%2Fmen-s-downhill-ski-with-binding-boost-500-black-and-blue.jpg%3F%26f%3D250x250%26format%3Dauto&w=640&q=75" style="width:100%">
+  <h2>Skis</h2>
+  <p></p>
+  <p><button><a href="https://www.decathlon.in/ski-equipment/adult-skis-10955">Check Now</a></button></p>
+  </div>
+ </div>
+	
+	
+	
+  <div class="column">
+  <div class="card">
+  <img src="https://www.decathlon.in/_next/image?url=https%3A%2F%2Fcontents.mediadecathlon.com%2Fp1230859%2Fk%24f9b523d9a7162c1886037457517528c9%2Fmen-s-downhill-ski-boots-wid-300-black.jpg%3F%26f%3D250x250%26format%3Dauto&w=640&q=75" style="width:100%">
+  <h2>Ski Boots</h2>
+  <p><button><a href="https://www.decathlon.in/ski-equipment/adult-ski-boots-5301">Check Now</a></button></p>
+  </div>
+   </div>
+	
+  <div class="column">
+  <div class="card">
+  <img src="https://www.decathlon.in/_next/image?url=https%3A%2F%2Fcontents.mediadecathlon.com%2Fp1511507%2F90f4aebd44e3139886f033b8db919cd0%2Fp1511507.jpg%26format%3Dauto&w=640&q=75" style="width:100%">
+  <h2>Ski Bags</h2>
+  <p><button><a href="https://www.decathlon.in/ski-equipment/skis-and-ski-boots-bags-5206">Check Now</a></button></p>
+  </div>
+   </div>
+   
+   
+</div> 
+
+</div>
+
+
+<div id="Sunglasses" class="tabcontent">
+<h2>Trekking poles</h2>
+	<div class="row">
+  <div class="column"> 
+ <div class="card">
+<section class="container content-section">
+            <h2 class="section-header"></h2>
+            <div class="shop-items">
+                <div class="shop-item">
+                    <span class="shop-item-title">Sunglasses1</span>
+                    <img class="shop-item-image" src="https://static1.lenskart.com/media/catalog/product/cache/1/small_image/376x180/9df78eab33525d08d6e5fb8d27136e95//v/i/vincent-chase-vc-s13137-c3-sunglasses_sunglasses_j_3265_1.jpg" style="width:100%">
+                    <div class="shop-item-details">
+<h3>description</h3>
+<p>Matte Gunmetal Full Rim Round Sunglasses</p>
+
+                        <span class="shop-item-price">$34.99</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+</div>
+</div>
+<div class="column"> 
+ <div class="card">
+<section class="container content-section">
+            <h2 class="section-header"></h2>
+            <div class="shop-items">
+                <div class="shop-item">
+                    <span class="shop-item-title">Sunglasses2</span>
+                    <img class="shop-item-image" src="https://static2.lenskart.com/media/catalog/product/cache/1/small_image/376x180/9df78eab33525d08d6e5fb8d27136e95//v/i/vincent-chase-vc-s12934-c2-sunglasses_g_8649_.jpg" style="width:100%">
+                    <div class="shop-item-details">
+<h3>description</h3>
+<p>Matte Golden Full Rim Square Sunglasses</p>
+                        <span class="shop-item-price">$30.99</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+</div>
+</div>
+</div>
+</div>
+
+<div id="Trekking poles" class="tabcontent">
+<h2>Trekking poles</h2>
+	<div class="row">
+  <div class="column"> 
+ <div class="card">
+<section class="container content-section">
+            <h2 class="section-header"></h2>
+            <div class="shop-items">
+                <div class="shop-item">
+                    <span class="shop-item-title">Trekking pole A100 Blue</span>
+                    <img class="shop-item-image" src="https://www.decathlon.in/_next/image?url=https%3A%2F%2Fcontents.mediadecathlon.com%2Fp1154695%2F1984e688c195218f1fecefd990629a09%2Fp1154695.jpg%26format%3Dauto&w=640&q=75" style="width:100%">
+                    <div class="shop-item-details">
+<h3>description</h3>
+<p>Our design team has designed this first price pole to enable you to walk safely during your occasional outings in the country.. Simple yet very effective Push-pin adjustment system. Simply press the push-pin and adjust. </p>
+
+                        <span class="shop-item-price">$34.99</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+</div>
+</div>
+<div class="column"> 
+ <div class="card">
+<section class="container content-section">
+            <h2 class="section-header"></h2>
+            <div class="shop-items">
+                <div class="shop-item">
+                    <span class="shop-item-title">Trekking pole A200</span>
+                    <img class="shop-item-image" src="https://www.decathlon.in/_next/image?url=https%3A%2F%2Fcontents.mediadecathlon.com%2Fp1325997%2F81b5f8c975335e62b14009d3b45b3049%2Fp1325997.jpg%26format%3Dauto&w=640&q=75" style="width:100%">
+                    <div class="shop-item-details">
+<h3>description</h3>
+<p>We designed this pole for occasional walkers who want to keep their balance during their outings in rough terrain.longer handle for traversing, adjustable wrist strap. And the same simple Push-pin adjustment system</p>
+                        <span class="shop-item-price">$30.99</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+<div id="Mountaneering" class="tabcontent">
+  <h2>Mountaneering and Climbing</h2>
+  <div class="row">
+  <div class="column"> 
+ <div class="card">
+  <img src="https://www.decathlon.in/_next/image?url=https%3A%2F%2Fcontents.mediadecathlon.com%2Fp1610260%2Fk%245593973140d9d6612d246c1d13d42333%2Fclimbing-shoes-edge-laces-2-aniseed-blue.jpg%3F%26f%3D250x250%26format%3Dauto&w=640&q=75" style="width:100%">
+  <h2>Climbing Shoes</h2>
+  <p></p>
+  <p><button><a href="https://www.decathlon.in/shoes-clothing-helmets/climbing-shoes-19171">Check Now</a></button></p>
+  </div>
+   </div>
+  <div class="column"> 
+ <div class="card">
+  <img src="https://www.decathlon.in/_next/image?url=https%3A%2F%2Fcontents.mediadecathlon.com%2Fp708214%2Fk%24ab7a5fdfbc6ce2a91549caf854e92ec1%2Fclimbing-and-mountaineering-helmet-rock-blue.jpg%3F%26f%3D250x250%26format%3Dauto&w=640&q=75" style="width:100%">
+  <h2>Helmet</h2>
+  <p></p>
+  <p><button><a href="https://www.decathlon.in/climbing/shoes-clothing-helmets-15351?refinementList%5Btes_product_nature_en%5D%5B0%5D=Helmet">Check Now</a></button></p>
+  </div>
+   </div>
+  <div class="column"> 
+ <div class="card">
+  <img src="https://www.decathlon.in/_next/image?url=https%3A%2F%2Fcontents.mediadecathlon.com%2Fp1807187%2Fk%248564283a9ed619a478c80211336a4516%2Fwarm-climbing-hat-antique-blue.jpg%3F%26f%3D250x250%26format%3Dauto&w=640&q=75" style="width:100%">
+  <h2> Clothing</h2>
+  <p></p>
+  <p><button><a href="https://www.decathlon.in/climbing/shoes-clothing-helmets-15351?refinementList%5Btes_product_nature_en%5D%5B0%5D=Cropped%20trousers&refinementList%5Btes_product_nature_en%5D%5B1%5D=Sweatshirt&refinementList%5Btes_product_nature_en%5D%5B2%5D=T-shirt&refinementList%5Btes_product_nature_en%5D%5B3%5D=Beanie">Check Now</a></button></p>
+  </div>
+   </div>
+  <div class="column"> 
+ <div class="card">
+  <img src="https://www.decathlon.in/_next/image?url=https%3A%2F%2Fcontents.mediadecathlon.com%2Fp1332473%2F5fe056d91b54054daaf113315123ee1a%2Fp1332473.jpg%26format%3Dauto&w=640&q=75" style="width:100%">
+  <h2> Accesories</h2>
+  <p></p>
+  <p><button><a href="https://www.decathlon.in/all-sports/mountaineering-10709">Check Now</a></button></p>
+  </div>
+   </div>
+   
+</div>
+</div>
+
+<div id="Medical Kits" class="tabcontent">
+  <h2>Medical Kits</h2>
+  <div class="row">
+  <div class="column"> 
+ <div class="card">
+  <img src="data:image/jpeg;base64,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
+Collapse" style="width:100%">
+  <h2>Medicine Kit</h2>
+  <p></p>
+  <p><button><a href="https://www.amazon.in/s?k=medicine+kit">Check Now</a></button></p>
+  </div>
+   </div>
+   
+</div>
+</div>
+
+
+<div id="Toiletries" class="tabcontent">
+  <h2>Toiletries</h2>
+	<div class="row">
+  <div class="column"> 
+ <div class="card">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmwCPhl02FxFJ9UdkUkzoKHJn023rfdXuNwgp1lOZHmrGGsIhIjC0s7BfRumXOFJvrgFt3S88&usqp=CAc" style="width:100%">
+  <h2>Toiletry Bags</h2>
+  <p></p>
+  <button class="tablinks" onclick="openTab(event, 'Toiletry bags')">Check Now</button>
+  </div>
+   </div>
+<div class="column"> 
+ <div class="card">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPyvZOv5NJKCT_nOq_vCTO0zHegJQrnCZs6DcWIXnZnyrxFZNt4F1UEn3w6w&usqp=CAc" style="width:100%;height=100px;">
+  <h2>Toiletry Items</h2>
+  <p></p>
+  <button class="tablinks" onclick="openTab(event, 'Toiletry Items')">Check Now</button>
+  </div>
+   </div>
+</div>
+
+</div>
+
+<div id="Toiletry Items" class="tabcontent">
+<h2>Toiletry Items</h2>
+	<div class="row">
+  <div class="column"> 
+ <div class="card">
+  <img src="data:image/jpeg;base64,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" style="width:100%">
+  <h2>Tooth brush and paste</h2>
+  <p></p>
+  <button class="tablinks" onclick="openTab(event, 'Tooth brush and paste')">Check Now</button>
+  </div>
+   </div>
+<div class="column"> 
+ <div class="card">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS66XapyqurIBTywD4F9TzFw_eH4gvXNpMlaQ&usqp=CAU" style="width:100%;height=100px;">
+  <h2>Soaps</h2>
+  <p></p>
+  <button class="tablinks" onclick="openTab(event, 'Soaps')">Check Now</button>
+  </div>
+   </div>
+<div class="column"> 
+ <div class="card">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRV4BaZX4YFFdPO2TRfQnwwNMG_UKzVOqMow&usqp=CAU" style="width:100%;height=100px;">
+  <h2>Sunscreen</h2>
+  <p></p>
+  <button class="tablinks" onclick="openTab(event, 'Sunscreen')">Check Now</button>
+  </div>
+   </div>
+</div>
+</div>
+
+ 
+
+
+
+
+<div id="Toiletry bags" class="tabcontent">
+ <h2>Toiletry Bags</h2>
+	<div class="row">
+  <div class="column"> 
+ <div class="card">
+<section class="container content-section">
+            <h2 class="section-header"></h2>
+            <div class="shop-items">
+                <div class="shop-item">
+                    <span class="shop-item-title">Bag 1</span>
+                    <img class="shop-item-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPyvZOv5NJKCT_nOq_vCTO0zHegJQrnCZs6DcWIXnZnyrxFZNt4F1UEn3w6w&usqp=CAc" style="width:100%">
+  <h3>Description</h3>
+<p>Water-resistant fabric will protect your personal items from the penetration of moisture or bacteria.The tidy and fine close stitching ensure the bags are sturdy and durable.Blue color </p>
+
+                    <div class="shop-item-details">
+<span class="shop-item-price">$2.99</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+</div>
+</div>
+
+ <div class="column"> 
+ <div class="card">
+<section class="container content-section">
+            <h2 class="section-header"></h2>
+            <div class="shop-items">
+                <div class="shop-item">
+                    <span class="shop-item-title">Bag 2</span>
+                    <img class="shop-item-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMJyri1G2tUmO8Obk3F6OobLXtC_0qQjx5J92XrhMrUGzKeh2IrQBz0aLjOVAY6pd2ody8t8g&usqp=CAc" style="width:100%">
+ <h3>Description</h3>
+    <p>Durable - made with -quality polyester with honeycomb pattern, strong handles professionally sewn into the side panels for ease of carrying, and double stitched seams, ensuring a long life</p>
+ <div class="shop-item-details">
+<span class="shop-item-price">$3.99</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+</div>
+</div>
+
+ <div class="column"> 
+ <div class="card">
+<section class="container content-section">
+            <h2 class="section-header"></h2>
+            <div class="shop-items">
+                <div class="shop-item">
+                    <span class="shop-item-title">Bag 3</span>
+                    <img class="shop-item-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSz6pQHXFpSnCmKWIKTMCpA69J-dCmF7wFFQan-Xl1TDWL2yszENzDmiwAQLf5M97FOSMPXSBM&usqp=CAc" style="width:100%">
+ <h3>Description</h3>
+  <p>Multiple compartments for different requests of storage, strong long lasting zippers.Material : Waterproof Fabric Nylon.1 Piece Foldable Multi-Purpose Storage Bag Kit-Multi Color</p>
+ <div class="shop-item-details">
+<span class="shop-item-price">$3.99</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+</div>
+</div>
+
+
+
+</div>
+</div> 
+
+</div>
+ 
+
+ 
+
+<div id="Tooth brush and paste" class="tabcontent">
+  <h2>Tooth brush and paste</h2>
+	<div class="row">
+  <div class="column"> 
+ <div class="card">
+<section class="container content-section">
+            <h2 class="section-header"></h2>
+            <div class="shop-items">
+                <div class="shop-item">
+                    <span class="shop-item-title">Tooth brush and paste 1</span>
+                    <img class="shop-item-image" src="https://m.media-amazon.com/images/I/61q3RafJk7L._AC_UL480_FMwebp_QL65_.jpg" style="width:100%" height:"300">
+ <h3>Description</h3>
+<p>Revive your senses with the new Colgate Charcoal Clean, that has the goodness of bamboo charcoal and wintergreen mint for a clean mouth experience</p>
+                    <div class="shop-item-details">
+<span class="shop-item-price">$2.99</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+</div>
+</div>
+
+ <div class="column"> 
+ <div class="card">
+<section class="container content-section">
+            <h2 class="section-header"></h2>
+            <div class="shop-items">
+                <div class="shop-item">
+                    <span class="shop-item-title">Tooth brush and paste 2</span>
+                    <img class="shop-item-image" src="https://images-na.ssl-images-amazon.com/images/I/61xhPSo85qL._SL1000_.jpg" style="width:100%;height:180px;">
+ <h3>Description</h3>
+  <p>Colgate Total Charcoal Clean is an toothpaste that fights germs on teeth, tongue, cheeks, and gums for upto 12 hours</p>
+<span class="shop-item-price">$3.99</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+</div>
+</div>
+
+
+</div>
+</div> 
+
+</div>
+ 
+  
+<div id="Sunscreen" class="tabcontent">
+ <h2>Sunscreen</h2>
+
+<div class="row">
+  <div class="column"> 
+ <div class="card">
+<section class="container content-section">
+            <h2 class="section-header"></h2>
+            <div class="shop-items">
+                <div class="shop-item">
+                    <span class="shop-item-title">Sunscreen lotus</span>
+                    <img class="shop-item-image" src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcReygrN-eZaw17tiiGaQ5jwX1ZLOrd2ATvBIG_nGdH575_N_Yl5KmrvW47okuXfJAuuhwTzIKpsVg&usqp=CAc" style="width:100%" height:"300">
+<h3>Description</h3>
+<p> Comfrey (Symphytum Officinale)
+Sebum Control Vanilla (Vanila Plamifolia)
+Soothing Horse Chestnut (Trapa Bispinosa): UV Protector
+Apply liberally and evenly on face and exposed parts of the body (neck, arms etc.)
+Country of Origin: India </p>
+                    <div class="shop-item-details">
+<span class="shop-item-price">$22.99</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+</div>
+</div>
+
+ <div class="column"> 
+ <div class="card">
+<section class="container content-section">
+            <h2 class="section-header"></h2>
+            <div class="shop-items">
+                <div class="shop-item">
+                    <span class="shop-item-title">Sunscreen re'equil</span>
+                    <img class="shop-item-image"  src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTf8tqBrQDnR2yD0wSrCl0JTcM9X66kAnzmDajPfibsfsCSOksbM9CEGwIftABFon6cYCOzyTJDSUI&usqp=CAc" style="width:100%">
+ <h3>Description</h3>
+  <p>UVA, UVB & IR protection with PA ++++ rating.
+Water resistant for all outdoor sports like swimming and cricket.
+Sweat resistant gel-based oil-free formula with no white cast, perfect under make-up.</p>
+                    <div class="shop-item-details">
+<span class="shop-item-price">$32.99</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+</div>
+</div>
+
+
+</div>
+</div>
+ </div>
+
+
+<div id="Soaps" class="tabcontent">
+
+	<div class="row">
+  <div class="column"> 
+ <div class="card">
+<section class="container content-section">
+            <h2 class="section-header">Soaps</h2>
+            <div class="shop-items">
+                <div class="shop-item">
+                    <span class="shop-item-title">Detol soap</span>
+                    <img class="shop-item-image" src="https://images-eu.ssl-images-amazon.com/images/I/61m4t%2BysZlL._AC_UL200_SR200,200_.jpg">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">$12.99</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+<div id = "CART" class="tabcontent">
+<section class="container content-section">
+            <h2 class="section-header">CART</h2>
+            <div class="cart-row">
+                <span class="cart-item cart-header cart-column">ITEM</span>
+                <span class="cart-price cart-header cart-column">PRICE</span>
+                <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+            </div>
+            <div class="cart-items">
+            </div>
+            <div class="cart-total">
+                <strong class="cart-total-title">Total</strong>
+                <span class="cart-total-price">$0</span>
+            </div>
+            <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
+        </section>
+
+</div>
+
+
+
+
+
+
+
+
+<div id="WildLife Watching" class="tabcontent">
+   
+  <h2>WildLife Watching </h2>
+   <div class="row">
+  <div class="column"> 
+ <div class="card">
+  <img src="https://www.decathlon.in/_next/image?url=https%3A%2F%2Fcontents.mediadecathlon.com%2Fp1289449%2Fbfdb456c010841ea0b52901b08c144c0%2Fp1289449.jpg%26format%3Dauto&w=640&q=75" style="width:100%">
+  <h2>Camo Clothing</h2>
+  <p><button><a href="https://www.decathlon.in/wildlife-watching/camo-clothing-2765">Check Now</a></button></p>
+  </div>
+   </div>
+
+	<div class="column">
+  <div class="card">
+  <img src="https://www.decathlon.in/_next/image?url=https%3A%2F%2Fcontents.mediadecathlon.com%2Fp618865%2Fa4d37dc883a90e0076fb907108492975%2Fp618865.jpg%26format%3Dauto&w=640&q=75" style="width:100%">
+  <h2>GumBoots & Shoes</h2>
+  <p></p>
+  <p><button><a href="https://www.decathlon.in/wildlife-watching/gumboots-shoes-2849">Check Now</a></button></p>
+  </div>
+ </div>
+	
+	
+	
+  <div class="column">
+  <div class="card">
+  <img src="https://www.decathlon.in/_next/image?url=https%3A%2F%2Fcontents.mediadecathlon.com%2Fp474408%2Fk%2410d8820cc27d9857d5da5f70328fec72%2Fwildlife-waterproof-100-litre-bag.jpg%3F%26f%3D250x250%26format%3Dauto&w=640&q=75" style="width:100%">
+  <h2>Camo Backpacks</h2>
+  <p><button><a href="https://www.decathlon.in/camo-accessories/camo-backpack-pockets-waist-bags-2868">Check Now</a></button></p>
+  </div>
+   </div>
+   
+   <div class="column">
+  <div class="card">
+  <img src="https://www.decathlon.in/_next/image?url=https%3A%2F%2Fcontents.mediadecathlon.com%2Fp1145008%2F1ac203e2670c1e27b9cabceb1c071cfc%2Fp1145008.jpg%26format%3Dauto&w=640&q=75" alt="Denim Jeans" style="width:100%">
+  <h2>Dog Accesories</h2>
+  <p><button><a href="https://www.decathlon.in/wildlife-watching/dog-accessories-16502">Check Now</a></button></p>
+ </div>
+   </div>
+
+</div> 
+   <div class="row">
+  <div class="column"> 
+ <div class="card">
+  <img src="https://www.decathlon.in/_next/image?url=https%3A%2F%2Fcontents.mediadecathlon.com%2Fp1145005%2Fk%248562781054f7cb35430845cb05b1d3d4%2Fmen-s-padded-jacket-100-camo-halftone-green.jpg%3F%26f%3D250x250%26format%3Dauto&w=640&q=75" style="width:100%">
+  <h2>Camo Jackets</h2>
+  <p><button><a href="https://www.decathlon.in/camo-clothing/camo-jackets-fleeces-sweaters-18694">Check Now</a></button></p>
+  </div>
+   </div>
+
+	<div class="column">
+  <div class="card">
+  <img src="https://www.decathlon.in/_next/image?url=https%3A%2F%2Fcontents.mediadecathlon.com%2Fp474648%2Fk%2486f86afa9434b3abc42fe07efa08c3c9%2Fcamouflage-hide-tent-brown.jpg%3F%26f%3D250x250%26format%3Dauto&w=640&q=75" style="width:100%">
+  <h2>Camo Shelters</h2>
+  <p></p>
+  <p><button><a href="https://www.decathlon.in/camo-accessories/camo-shelters-14999">Check Now</a></button></p>
+  </div>
+ </div>
+	
+	
+	
+  <div class="column">
+  <div class="card">
+  <img src="https://www.decathlon.in/_next/image?url=https%3A%2F%2Fcontents.mediadecathlon.com%2Fp1191298%2F0ea5c0c20a8b979ca49306d17de82971%2Fp1191298.jpg%26format%3Dauto&w=640&q=75" style="width:100%">
+  <h2>Knives & Multitool</h2>
+  <p><button><a href="https://www.decathlon.in/camo-accessories/knives-multi-tool-15591">Check Now</a></button></p>
+  </div>
+   </div>
+   
+   <div class="column">
+  <div class="card">
+  <img src="https://www.decathlon.in/_next/image?url=https%3A%2F%2Fcontents.mediadecathlon.com%2Fp1778253%2F4ceadc8dc8ab373904abc6121fda4ad3%2Fp1778253.jpg%26format%3Dauto&w=640&q=75" style="width:100%">
+  <h2>Binoculars</h2>
+  <p><button><a href="https://www.decathlon.in/camo-accessories/binoculars-spotting-scopes-14996">Check Now</a></button></p>
+ </div>
+   </div>
+
+</div> 
+
+
+</div>
+
+<script>
+function openTab(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</body>
+</html>
