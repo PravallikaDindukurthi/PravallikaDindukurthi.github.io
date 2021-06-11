@@ -59,16 +59,9 @@ var cartRows = cartItems.getElementsByClassName('cart-row')
 pricearray[i]= price 
         //alert(quantity)
     }
-
  
     for (var i = 0; i < cartItemNames.length; i++) {
         array2[i]=cartItemNames[i].innerText
-        //alert(cartItemNames[i].innerText)
-       // alert(array2[i])
-//alert(quanarray[i])
-//alert(pricearray[i])
-//per item price.
-
     }
 	var parser = new DOMParser();	
 	var xml = "<Order BuyerOrganizationCode=\"DEFAULT\" DocumentType=\"0001\" EnterpriseCode=\"DEFAULT\" OrderNo=\"" + create_UUID() +"\" SellerOrganizationCode=\"DEFAULT\">"
@@ -95,21 +88,8 @@ pricearray[i]= price
 	var xmlDoc = parser.parseFromString(xml, "application/xml");
     alert(xml)
 	
-	
-	/*
-	
-	const xhr = new XMLHttpRequest();
-	xhr.onload =function(){
-		const serverResponse = document.getElementById("demoo");
-		serverResponse.innerHTML=this.responseText;
-	}
-	xhr.open("POST","https://keerthanagolla.github.io/test.php");
-	xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-xhr.send("name=k&message=yo");*/
-
-
 	var xmlhttp = new XMLHttpRequest();
-    xmlhttp.open("POS","http://9.199.148.205:9080/smcfs/restapi/executeFlow/TestDbService",true);
+   	xmlhttp.open("POST","http://9.199.148.205:9080/smcfs/restapi/executeFlow/TestDbService",true);
 	xmlhttp.setRequestHeader( 'Access-Control-Allow-Origin', '*');
 	xmlhttp.setRequestHeader( 'Content-Type', 'application/xml' );
 	xmlhttp.withCredentials = true;
@@ -125,38 +105,9 @@ xhr.send("name=k&message=yo");*/
 		alert("your order id " + p );
 		}
 	};
-	
-	
-	//alert(array2[0])
-	xmlhttp.setRequestHeader('Content-Type', 'text/xml');
+	//xmlhttp.setRequestHeader('Content-Type', 'text/xml');
 	xmlhttp.send(xml);
 
-
-/*
-var xhr;
-	 if (window.XMLHttpRequest) { // Mozilla, Safari, ...
-    xhr = new XMLHttpRequest();
-} else if (window.ActiveXObject) { // IE 8 and older
-    xhr = new ActiveXObject("Microsoft.XMLHTTP");
-}
-
-
-
-//alert(data);
-  // Build the URL to connect to
-  var url = "https://keerthanagolla.github.io/test.php";
-
-  // Open a connection to the server
-  xhr.open("POST", url, true);
-
-  // declaring that the data being sent is in XML format
-  xhr.setRequestHeader("Content-Type", "text/xml");
-
-  // Send the request
-  xhr.send(xml);
-*/
-
-   // alert(array2[0])
     while (cartItems.hasChildNodes()) {
         cartItems.removeChild(cartItems.firstChild)
     }
