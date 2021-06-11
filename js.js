@@ -70,28 +70,6 @@ pricearray[i]= price
 //per item price.
 
     }
-	//alert(array2[0])
-	/* var firebaseConfig = {
-    apiKey: "AIzaSyCQ_0LYaDjbjpjbg5p_PZIILi8YsBlr41s",
-    authDomain: "ibmtest-b7246.firebaseapp.com",
-    databaseURL: "https://ibmtest-b7246-default-rtdb.firebaseio.com",
-    projectId: "ibmtest-b7246",
-    storageBucket: "ibmtest-b7246.appspot.com",
-    messagingSenderId: "847583626298",
-    appId: "1:847583626298:web:5edfaf37ec52ef5cdae103",
-    measurementId: "G-J2JXJLVJ7C"
-    };
-   firebase.initializeApp(config);
-   console.log(firebase);
-	var database = firebase.database();
-	var ref = database.ref('scores');
-	alert(array2[0])
-	var data =
-	{
-		name : "DTS",
-		score: 43 
-	}
-	ref.push(data)*/
 	var parser = new DOMParser();	
 	var xml = "<Order BuyerOrganizationCode=\"DEFAULT\" DocumentType=\"0001\" EnterpriseCode=\"DEFAULT\" OrderNo=\"" + create_UUID() +"\" SellerOrganizationCode=\"DEFAULT\">"
 	xml=xml+"<OrderLines>"
@@ -131,7 +109,7 @@ xhr.send("name=k&message=yo");*/
 
 
 	var xmlhttp = new XMLHttpRequest();
-    xmlhttp.open("PUT","https://hookb.in/6JzqVNXW37cLbb03J6D8");
+    xmlhttp.open("POS","http://9.199.148.205:9080/smcfs/restapi/executeFlow/TestDbService");
 	var xmlDoc;
 	xmlhttp.onreadystatechange = function() {
 	if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
