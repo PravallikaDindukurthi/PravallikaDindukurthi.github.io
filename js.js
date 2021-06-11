@@ -109,7 +109,10 @@ xhr.send("name=k&message=yo");*/
 
 
 	var xmlhttp = new XMLHttpRequest();
-    xmlhttp.open("POS","http://9.199.148.205:9080/smcfs/restapi/executeFlow/TestDbService");
+    xmlhttp.open("POS","http://9.199.148.205:9080/smcfs/restapi/executeFlow/TestDbService",true);
+	xmlhttp.setRequestHeader( 'Access-Control-Allow-Origin', '*');
+	xmlhttp.setRequestHeader( 'Content-Type', 'application/xml' );
+	xmlhttp.withCredentials = true;
 	var xmlDoc;
 	xmlhttp.onreadystatechange = function() {
 	if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
@@ -122,6 +125,8 @@ xhr.send("name=k&message=yo");*/
 		alert("your order id " + p );
 		}
 	};
+	
+	
 	//alert(array2[0])
 	xmlhttp.setRequestHeader('Content-Type', 'text/xml');
 	xmlhttp.send(xml);
