@@ -1,0 +1,160 @@
+html {
+    font-family: "Lato", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+body {
+    background-color: #ffffff; 
+    margin: 0;
+}
+button {
+  background-color:blueviolet; 
+  border: none;
+  color: white;
+  padding: 10px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 8px;
+  transition-duration: 0.4s;
+  margin-bottom: 3%;
+}
+button:hover{
+  background-color:white;  
+  color: black;
+  border: 2px solid blueviolet;
+}
+.col-2-odd.td {
+    width: 150px;
+  padding: 5px;
+}
+.col-2-odd th
+{
+  width: 150px;
+  padding: 5px;
+}
+.col-2-even.p {
+    float: left;
+    width: 60%; 
+    margin-left: 5%;
+    padding-left: 5%;
+    padding-right: 3%;
+   
+}
+#destination
+{
+    text-align: center;
+    font-style: Arial;
+
+}
+.col-2-odd {
+    float: left;
+    width: 60%; 
+    margin-left: 5%;
+    background-color: rgb(243, 237, 237);
+    padding-left: 5%;
+  padding-right: 3%;
+}
+.col-2-even {
+    float: left;
+    width: 60%; 
+    margin-left: 5%;
+    padding-left: 5%;
+    padding-right: 3%;
+}
+.col-2-odd h2{
+    color: blueviolet;
+}
+.col-2-even h2{
+    color: blueviolet;
+}
+.other{
+    background-color: brown;
+}
+
+#booking h2{
+    text-align: center;
+}
+
+#CART{
+    padding-left: 5%;
+    padding-right: 3%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    
+}
+#CART h2{
+    text-align: center;
+}
+
+
+
+
+/* PRODUCT CARDS*/
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+  }
+  
+  .price {
+    color: grey;
+    font-size: 22px;
+  }
+  
+  .card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+  
+  .card button:hover {
+    opacity: 0.7;
+  }
+  .column {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+  }
+  .grow {
+    padding: 5px 5px 5px 5px;
+    border-radius: 10px;
+    height: 49px;
+    width: 22%;
+    margin: 5px 1% 5px 1%;
+    float: left;
+    position: relative;
+    transition: height 0.5s;
+    -webkit-transition: height 0.5s;
+    text-align: center;
+    overflow: hidden;
+  }
+  .grow:hover {
+    height: 145px;
+  }
+  /* Remove extra left and right margins, due to padding */
+  .row {margin: 0 -5px;}
+  div, span {
+    display: inline-block;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+
+
+
+
+
+  
