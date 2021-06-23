@@ -6,7 +6,7 @@ body {
     margin: 0;
 }
 button {
-  background-color:blueviolet; 
+  background-color:orange; 
   border: none;
   color: white;
   padding: 10px 24px;
@@ -21,7 +21,7 @@ button {
 button:hover{
   background-color:white;  
   color: black;
-  border: 2px solid blueviolet;
+  border: 2px solid orange;
 }
 .col-2-odd.td {
     width: 150px;
@@ -31,14 +31,6 @@ button:hover{
 {
   width: 150px;
   padding: 5px;
-}
-.col-2-even.p {
-    float: left;
-    width: 60%; 
-    margin-left: 5%;
-    padding-left: 5%;
-    padding-right: 3%;
-   
 }
 #destination
 {
@@ -62,10 +54,10 @@ button:hover{
     padding-right: 3%;
 }
 .col-2-odd h2{
-    color: blueviolet;
+    color: orange;
 }
 .col-2-even h2{
-    color: blueviolet;
+    color: orange;
 }
 .other{
     background-color: brown;
